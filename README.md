@@ -1,4 +1,4 @@
-# ErrorContainer
+# ErrorLayout
 Simple layout to show custom error toast with animation
 
 # View
@@ -21,10 +21,10 @@ compile 'com.github.steelkiwi:error-container:1.0.0'
 
 # Usage:
 
-Add ErrorContainer to your xml layout
+Add ErrorLayout to your xml layout
 
 ```xml
-<soulyaroslav.com.errorcontainer.view.ErrorContainer
+<steelkiwi.com.library.view.ErrorContainer
         android:id="@+id/container"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
