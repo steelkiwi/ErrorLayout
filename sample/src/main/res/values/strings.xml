@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">ErrorLayout</string>
+    <string name="empty_name_message">Empty name</string>
+    <string name="empty_email_message">Empty email</string>
+    <string name="empty_password_message">Empty password</string>
+    <string name="full_name">Full Name</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+</resources>
