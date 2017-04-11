@@ -5,18 +5,18 @@ Simple layout to show custom error toast with animation
 
 Toast will arise from bottom of screen to top
 
-![](https://media.giphy.com/media/3og0IHibMzYeLQmpmo/giphy.gif)
+![](https://media.giphy.com/media/3og0IDq5JE9OopUPL2/source.gif)
 
 or top of screen to bottom
 
-![](https://media.giphy.com/media/xUA7bfwh355dxeVegM/giphy.gif)
+![](https://media.giphy.com/media/3og0Iz6rA6g5V3UmcM/source.gif)
 
 # Download
 
 Download via Gradle:
 
 ```gradle
-soon
+compile 'com.steelkiwi:error-layout:1.0.0'
 ```
 
 # Usage:

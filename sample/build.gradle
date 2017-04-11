@@ -29,4 +29,5 @@ dependencies {
     compile project (":library")
     compile 'jp.wasabeef:picasso-transformations:2.1.0'
     compile 'com.squareup.picasso:picasso:2.5.2'
+//    compile 'com.steelkiwi:error-layout:1.0.0'
 }
