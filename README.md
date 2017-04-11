@@ -16,7 +16,7 @@ or top of screen to bottom
 Download via Gradle:
 
 ```gradle
-compile 'com.github.steelkiwi:error-container:1.0.0'
+soon
 ```
 
 # Usage:
