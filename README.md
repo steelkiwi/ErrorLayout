@@ -9,7 +9,7 @@ Toast will arise from bottom of screen to top
 
 or top of screen to bottom
 
-![](https://media.giphy.com/media/3og0Iz6rA6g5V3UmcM/giphy.gif)
+![](https://media.giphy.com/media/3o7btQ6GoWHwFGqAy4/giphy.gif)
 
 # Download
 
