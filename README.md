@@ -5,11 +5,11 @@ Simple layout to show custom error toast with animation
 
 Toast will arise from bottom of screen to top
 
-![](https://media.giphy.com/media/3og0IDq5JE9OopUPL2/source.gif)
+![](https://media.giphy.com/media/3og0IDq5JE9OopUPL2/giphy.gif)
 
 or top of screen to bottom
 
-![](https://media.giphy.com/media/3og0Iz6rA6g5V3UmcM/source.gif)
+![](https://media.giphy.com/media/3og0Iz6rA6g5V3UmcM/giphy.gif)
 
 # Download
 
