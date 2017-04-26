@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
                 .setTextSize(14)
                 .setTextColor(Color.WHITE)
                 .setTextGravity(Gravity.CENTER)
-                .setAnimationType(AnimationType.DOWN)
+                .setAnimationType(AnimationType.TOP)
                 .setShowDelay(2)
                 .build();
         errorContainer.setToast(toastView);
