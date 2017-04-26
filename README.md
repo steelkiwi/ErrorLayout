@@ -5,11 +5,11 @@ Simple layout to show custom error toast with animation
 
 Toast will arise from bottom of screen to top
 
-![](https://github.com/steelkiwi/PullRefreshLayout/blob/master/assets/error-layout-top-animation.gif)
+![](https://github.com/steelkiwi/ErrorLayout/blob/master/assets/error-layout-top-animation.gif)
 
 or top of screen to bottom
 
-![](https://github.com/steelkiwi/PullRefreshLayout/blob/master/assets/error-layout-down-animation.gif)
+![](https://github.com/steelkiwi/ErrorLayout/blob/master/assets/error-layout-down-animation.gif)
 
 # Download
 
