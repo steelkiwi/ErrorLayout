@@ -46,6 +46,7 @@ ToastView toastView = new ToastView.Builder(this)
                 .setAnimationType(AnimationType.TOP)
                 .setShowDelay(2) // in seconds
                 .setBackground(R.drawable.toast_background)
+                .setUseActionBar(true) // if use action bar set true
                 .build();
 ```
 
