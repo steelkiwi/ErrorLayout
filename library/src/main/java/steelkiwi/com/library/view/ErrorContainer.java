@@ -5,6 +5,7 @@ import android.animation.AnimatorListenerAdapter;
 import android.content.Context;
 import android.os.Handler;
 import android.util.AttributeSet;
+import android.util.TypedValue;
 import android.view.View;
 import android.view.animation.AccelerateInterpolator;
 import android.view.animation.DecelerateInterpolator;
@@ -31,6 +32,7 @@ public class ErrorContainer extends RelativeLayout {
     private Handler handler;
     private boolean isAnimFinish = true;
     private boolean isToastShowed = false;
+    private float actionBarHeight;
 
     public ErrorContainer(Context context) {
         super(context);
@@ -52,6 +54,10 @@ public class ErrorContainer extends RelativeLayout {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
         parentWidth = MeasureSpec.getSize(widthMeasureSpec);
         parentHeight = MeasureSpec.getSize(heightMeasureSpec);
+        if(getToastView().getUsedActionBar()) {
+            actionBarHeight = resolveAttribute(android.R.attr.actionBarSize);
+            parentHeight += actionBarHeight;
+        }
         setMeasuredDimension(parentWidth, parentHeight);
     }
 
@@ -82,10 +88,17 @@ public class ErrorContainer extends RelativeLayout {
         }
     }
 
-    private int[] calculateViewPosition(final View view){
+    private int[] calculatePositionOnScreen(final View view){
         int[] locations = new int[2];
         // get view location on the screen
         view.getLocationOnScreen(locations);
+        return locations;
+    }
+
+    private int[] calculatePositionInWindow(final View view) {
+        int[] locations = new int[2];
+        // get location on the window
+        view.getLocationInWindow(locations);
         return locations;
     }
 
@@ -93,7 +106,8 @@ public class ErrorContainer extends RelativeLayout {
         prepareDefaultToastState();
         if(view != null && isAnimFinish() && !isToastShowed()) {
             // calculate view position where error happened
-            int[] locations = calculateViewPosition(view);
+            int[] locations = getToastView().getUsedActionBar()
+                    ? calculatePositionOnScreen(view) : calculatePositionInWindow(view);
             float x = locations[0];
             float y = locations[1];
             // set error message on toast
@@ -184,6 +198,14 @@ public class ErrorContainer extends RelativeLayout {
                         setToastShowed(false);
                     }
                 });
+    }
+
+    private float resolveAttribute(int attr) {
+        TypedValue tv = new TypedValue();
+        if(getContext().getTheme().resolveAttribute(attr, tv, true)) {
+            return TypedValue.complexToDimensionPixelSize(tv.data, getResources().getDisplayMetrics());
+        }
+        return 0f;
     }
 
     public void setToast(ToastView toast) {

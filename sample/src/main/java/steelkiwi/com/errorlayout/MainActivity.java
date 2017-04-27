@@ -38,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
                 .setTextGravity(Gravity.CENTER)
                 .setAnimationType(AnimationType.TOP)
                 .setShowDelay(2)
+                .setUseActionBar(true)
                 .build();
         errorContainer.setToast(toastView);
 

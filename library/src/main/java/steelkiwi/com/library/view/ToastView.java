@@ -27,6 +27,7 @@ public class ToastView extends LinearLayout {
     private static final int DEFAULT_GRAVITY = Gravity.CENTER;
     private static final int DEFAULT_DELAY = 1000;
     private int showDelay;
+    private boolean usedActionBar;
     private AnimationType animationType;
 
     public ToastView(Context context) {
@@ -85,6 +86,14 @@ public class ToastView extends LinearLayout {
         this.animationType = animationType;
     }
 
+    public boolean getUsedActionBar() {
+        return usedActionBar;
+    }
+
+    public void setUsedActionBar(boolean usedActionBar) {
+        this.usedActionBar = usedActionBar;
+    }
+
     public static class Builder {
         private ToastView toastView;
         private TextView errorTitle;
@@ -131,6 +140,11 @@ public class ToastView extends LinearLayout {
 
         public Builder setAnimationType(AnimationType state) {
             toastView.setAnimationType(state);
+            return this;
+        }
+
+        public Builder setUseActionBar(boolean useActionBar) {
+            toastView.setUsedActionBar(useActionBar);
             return this;
         }
 
