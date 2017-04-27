@@ -16,7 +16,7 @@ or top of screen to bottom
 Download via Gradle:
 
 ```gradle
-compile 'com.steelkiwi:error-layout:1.0.0'
+compile 'com.steelkiwi:error-layout:1.1.0'
 ```
 
 # Usage:
